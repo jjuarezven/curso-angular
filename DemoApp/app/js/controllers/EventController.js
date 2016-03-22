@@ -21,7 +21,7 @@ eventsApp.controller('EventController',
 				{
 					name: 'Directives masterclass',
 					creatorName: 'Bob Smith',
-					duration: '1 hour',
+					duration: 1,
 					level: 'Advanced',
 					abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, voluptas rerum molestiae quidem molestias corporis dignissimos sed nam eligendi dolorem adipisci doloremque veritatis enim consequatur fugiat. Nesciunt, molestias aliquid sapiente.'
 					,upVoteCount: 0
@@ -29,7 +29,7 @@ eventsApp.controller('EventController',
 					{
 					name: 'Scopes for fun and profit',
 					creatorName: 'John Doe',
-					duration: '30 minutes',
+					duration: 2,
 					level: 'Introductory',
 					abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, voluptas rerum molestiae quidem molestias corporis dignissimos sed nam eligendi dolorem adipisci doloremque veritatis enim consequatur fugiat. Nesciunt, molestias aliquid sapiente.'
 					,upVoteCount: 0
@@ -37,7 +37,7 @@ eventsApp.controller('EventController',
 				{
 					name: 'Well behaved controllers',
 					creatorName: 'Jane Doe',
-					duration: '2 houra',
+					duration: 4,
 					level: 'Intermediate',
 					abstract: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, voluptas rerum molestiae quidem molestias corporis dignissimos sed nam eligendi dolorem adipisci doloremque veritatis enim consequatur fugiat. Nesciunt, molestias aliquid sapiente.'
 					,upVoteCount: 0
