@@ -24,11 +24,16 @@
 	};
 });*/
 
-// usando $resource (se asume que el servicio es en formato REST)
+// usando $resource (se asume que el servicio es REST)
 eventsApp.factory('eventData', function($resource){
+	var resource = $resource('/data/event/:id', {id:'@id'});
 	return {
 		getEvent: function() {			
-			return $resource('/data/event/:id', {id:'@id'}).get({id:2});			
+			return resource.get({id:88});			
+		},
+		save: function(event){
+			event.id = 88;
+			return resource.save(event);
 		}
 	};
 });
