@@ -16,10 +16,19 @@
 });*/
 
 // usando $http promise
-eventsApp.factory('eventData', function($http){
+/*eventsApp.factory('eventData', function($http){
 	return {
 		getEvent: function() {			
 			return $http({method: 'GET', url: '/data/event/2'});			
+		}
+	};
+});*/
+
+// usando $resource (se asume que el servicio es en formato REST)
+eventsApp.factory('eventData', function($resource){
+	return {
+		getEvent: function() {			
+			return $resource('/data/event/:id', {id:'@id'}).get({id:2});			
 		}
 	};
 });

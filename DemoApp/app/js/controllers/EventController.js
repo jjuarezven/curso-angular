@@ -8,16 +8,26 @@ eventsApp.controller('EventController',
 		$scope.myStyle = {color:'red'};
 		$scope.sortOrder = 'name';
 		//$scope.event = eventData.event;
+		
 		// usando callback
 		/*eventData.getEvent(function(event){
 			$scope.event = event;
 		});*/
+		
 		// usando $http promises
-		eventData.getEvent()
+		/*eventData.getEvent()
 		.success(function(event){ $scope.event = event; })
 		.error(function(data, status, headers, config){
 				$log.warn(data, status, headers(), config);
-			});
+			});*/
+		
+		// usando $resource
+		//$scope.event = eventData.getEvent();
+		eventData.getEvent()
+			.$promise
+			.then(function(event) {$scope.event = event;})
+			.catch(function(response) {console.log(response);});
+		
 		
 		$scope.upVoteSession = function(session){
 			session.upVoteCount++;
