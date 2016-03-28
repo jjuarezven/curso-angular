@@ -1,7 +1,7 @@
 'use strict';
 
 eventsApp.controller('EventController',
-	function EventController($scope, eventData, $log){
+	function EventController($scope, eventData, $log, $anchorScroll){
 		$scope.snippet = '<span style="color:red">HI THERE</span>';
 		$scope.boolValue = true;
 		$scope.buttonDisabled = true;
@@ -43,5 +43,9 @@ eventsApp.controller('EventController',
 			$scope.boolValue = !$scope.boolValue;
 			$scope.buttonDisabled = $scope.boolValue;
 		};
+		
+		$scope.scrollToSession = function() {
+			$anchorScroll();
+		}
 	}
 );
