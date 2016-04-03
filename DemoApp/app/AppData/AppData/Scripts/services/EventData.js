@@ -26,7 +26,8 @@
 
 // usando $resource (se asume que el servicio es REST)
 eventsApp.factory('eventData', function($resource){
-	var resource = $resource('/data/event/:id', {id:'@id'});
+	//var resource = $resource('/data/event/:id', {id:'@id'});
+	var resource = $resource('/event/:id', { id: '@id' });
 	return {
 		getEvent: function() {			
 			return resource.get({id:2});			

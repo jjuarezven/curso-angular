@@ -13,12 +13,12 @@ namespace AppData.Controllers
 
 		public JToken Get(string id = null)
 		{			
-			return JObject.Parse(File.ReadAllText(string.Concat(path, "../app/data/event/", id, ".json")));
+			return JObject.Parse(File.ReadAllText(string.Concat(path, "../AppData/data/event/", id, ".json")));
 		}
 
 		public void Post(string id, JObject eventData)
 		{
-			File.WriteAllText(string.Concat(path, "../app/data/event/", id, ".json"), eventData.ToString(Formatting.None));
+			File.WriteAllText(string.Concat(path, "../AppData/data/event/", id, ".json"), eventData.ToString(Formatting.None));
 		}
 	}
 }
