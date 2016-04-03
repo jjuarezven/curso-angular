@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="eventsApp">
+<head>
+    <title>Cache Sample</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script type="text/javascript" src="lib/jquery.min.js" async></script>
+	<script type="text/javascript" src="lib/bootstrap.min.js" async></script>
+	<script type="text/javascript" src="lib/angular/angular.js" defer></script>
+	<script type="text/javascript" src="lib/angular/angular-sanitize.min.js" defer></script>
+	<script type="text/javascript" src="lib/angular/angular-resource.min.js" defer></script>
+	<script type="text/javascript" src="js/app.js" defer></script>
+	<script type="text/javascript" src="js/controllers/CacheSampleController.js" defer></script>
+	<script type="text/javascript" src="js/services/CacheSampleService.js" defer></script>
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="CacheSampleController" style="padding:20px;">
+			key:<input type="text" ng-model="key" /> <br/>
+			value:<input type="text" ng-model="value" /> <br/>
+			<button type="button" ng-click="addToCache(key,value)" class="btn">Add to Cache</button>
+			<br />
+			<br />
+			<input type="text" ng-model="keyToRead" /> <br/>
+			<h3>Value from cache: {{readFromCache(keyToRead)}}</h3>
+			<h3>Cache Stats: {{getCacheStats()}}</h3>
+		</div>
+	</div>
+</body>
+</html>
