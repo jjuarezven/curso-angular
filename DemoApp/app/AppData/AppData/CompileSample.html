@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en" ng-app="eventsApp">
 <head>
-    <title>Cache Sample</title>
+    <title>Compile Sample</title>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="Content/bootstrap.min.css">
 	<link rel="stylesheet" href="Content/app.css">
@@ -11,20 +11,16 @@
 	<script type="text/javascript" src="Scripts/angular-sanitize.min.js" defer></script>
 	<script type="text/javascript" src="Scripts/angular-resource.min.js" defer></script>
 	<script type="text/javascript" src="Scripts/app.js" defer></script>
-	<script type="text/javascript" src="Scripts/controllers/CacheSampleController.js" defer></script>
-	<script type="text/javascript" src="Scripts/services/CacheSampleService.js" defer></script>
+	<script type="text/javascript" src="Scripts/controllers/CompileSampleController.js" defer></script>
 </head>
 <body>
 	<div class="container">
-		<div ng-controller="CacheSampleController" style="padding:20px;">
-			key:<input type="text" ng-model="key" /> <br/>
-			value:<input type="text" ng-model="value" /> <br/>
-			<button type="button" ng-click="addToCache(key,value)" class="btn">Add to Cache</button>
-			<br />
-			<br />
-			<input type="text" ng-model="keyToRead" /> <br/>
-			<h3>Value from cache: {{readFromCache(keyToRead)}}</h3>
-			<h3>Cache Stats: {{getCacheStats()}}</h3>
+		<div ng-controller="CompileSampleController" style="padding:20px;">
+			<div id="aqui"></div>
+			<br/>
+			name:<input type="text" value="" ng-model="name" /><br/>
+			markup:<input type="text" value="" ng-model="markup" /><br />
+			<button class="btn" ng-click="appendDivToElement(markup)">Append</button>
 		</div>
 	</div>
 </body>
