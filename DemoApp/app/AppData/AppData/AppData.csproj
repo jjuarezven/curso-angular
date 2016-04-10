@@ -166,6 +166,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="LocalSample.html" />
     <Content Include="CompileSample.html" />
     <Content Include="CacheSample.html" />
     <Content Include="Content\app.css" />
@@ -233,6 +234,7 @@
     <Content Include="data\event\4.json" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\controllers\LocalSampleController.js" />
     <Content Include="Scripts\controllers\CacheSampleController.js" />
     <Content Include="Scripts\controllers\CompileSampleController.js" />
     <Content Include="Scripts\controllers\EditEventController.js" />
