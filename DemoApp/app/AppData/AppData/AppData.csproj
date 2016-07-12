@@ -168,6 +168,7 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="LocalSample.html" />
     <Content Include="Scripts\controllers\LocalSampleController.js" />
+    <Content Include="Scripts\controllers\ExceptionHandler.js" />
     <Content Include="TimeoutSample.html" />
     <Content Include="CompileSample.html" />
     <Content Include="CacheSample.html" />
