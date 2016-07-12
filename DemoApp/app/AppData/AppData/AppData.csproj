@@ -166,7 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="FilterSample.html" />
     <Content Include="LocalSample.html" />
+    <Content Include="Scripts\controllers\FilterSampleController.js" />
     <Content Include="Scripts\controllers\LocalSampleController.js" />
     <Content Include="Scripts\controllers\ExceptionHandler.js" />
     <Content Include="TimeoutSample.html" />
