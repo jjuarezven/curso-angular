@@ -166,8 +166,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="CookieStoreSample.html" />
     <Content Include="FilterSample.html" />
     <Content Include="LocalSample.html" />
+    <Content Include="Scripts\controllers\CookieStoreSampleController.js" />
     <Content Include="Scripts\controllers\FilterSampleController.js" />
     <Content Include="Scripts\controllers\LocalSampleController.js" />
     <Content Include="Scripts\controllers\ExceptionHandler.js" />

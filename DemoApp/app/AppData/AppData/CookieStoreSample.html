@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html lang="en" ng-app="eventsApp">
+<head>
+	<meta charset="utf-8">
+	<title>Cookie Sample</title>
+	<link rel="stylesheet" href="Content/bootstrap.min.css">
+	<link rel="stylesheet" href="Content/app.css">
+</head>
+<body>
+	<div class="container">
+		<div ng-controller="CookieStoreSampleController" style="padding:20px;">
+			<button class="btn" ng-click="saveEventToCookie(event)">Store Cookie</button>
+			<button class="btn" ng-click="getEventFromCookie()">Get Cookie</button>
+			<button class="btn" ng-click="removeEventCookie()">Remove Cookie</button>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="Scripts/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Scripts/angular.min.js"></script>
+	<script type="text/javascript" src="Scripts/angular-sanitize.min.js"></script>
+	<script type="text/javascript" src="Scripts/angular-resource.min.js"></script>
+	<!--se debe descomentar para que funcione y agregar ngCookies en app.js, si se deja esta referencia, se debe incluir en todos los demas archivos para que funcionen-->
+	<!--<script type="text/javascript" src="Scripts/angular-cookies.min.js"></script>-->
+	<script type="text/javascript" src="Scripts/app.js"></script>
+	<script type="text/javascript" src="Scripts/controllers/CookieStoreSampleController.js"></script>
+</body>
+</html>
