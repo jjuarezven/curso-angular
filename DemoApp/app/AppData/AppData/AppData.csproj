@@ -123,6 +123,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -168,6 +169,7 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="CookieStoreSample.html" />
     <Content Include="FilterSample.html" />
+    <Content Include="index.html" />
     <Content Include="LocalSample.html" />
     <Content Include="Scripts\controllers\CookieStoreSampleController.js" />
     <Content Include="Scripts\controllers\FilterSampleController.js" />
