@@ -1,7 +1,7 @@
 'use strict';
 
 eventsApp.controller('EventController',
-	function EventController($scope, eventData, $log, $anchorScroll, $routeParams){
+	function EventController($scope, eventData, $log, $anchorScroll, $routeParams, $route){
 		$scope.snippet = '<span style="color:red">HI THERE</span>';
 		$scope.boolValue = true;
 		$scope.buttonDisabled = true;
@@ -46,6 +46,17 @@ eventsApp.controller('EventController',
 		
 		$scope.scrollToSession = function() {
 			$anchorScroll();
+		}
+
+		// accediendo a propiedades personalizadas mediante el servicio $route
+		console.log($route.current.foo);
+
+		// accediendo a valores de parametros mediante el servicio $route, usando el query string (?foo=valor)
+		console.log($route.current.params.eventId);
+		console.log($route.current.params.foo);
+
+		$scope.Reload = function () {
+			$route.reload();
 		}
 	}
 );
