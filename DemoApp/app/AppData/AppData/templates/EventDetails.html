@@ -1,0 +1,86 @@
+﻿<div style="padding-left:20px; padding-right:20px">
+	<img src="{{event.imageUrl}}" alt="{{event.name}}">
+	<button type="button" class="btn btn-primary" ng-click="scrollToSession()">Scroll</button>
+	<div class="row">
+		<div class="span6">
+			<!-- forma original: <h2>{{event.name}}</h2>
+			otra manera de hacer lo mismo, con ng-bind: <h2 ng-bind="event.name"/>
+			filter: {{event.name | uppercase}}
+			-->
+			<h2 ng-style="myStyle" ng-bind-template="{{event.name | uppercase}} - {{event.date | date:'dd/MM/yyyy'}}" />
+		</div>
+	</div>
+
+	<button class="btn" ng-disabled="buttonDisabled">Disabled</button>
+
+	<div ng-non-bindable>{{1 + 2}}</div>
+
+	<div ng-bind-html="snippet"></div>
+
+	<div ng-click="switchBoolValue()">
+		<h2 ng-show="boolValue">Show this (click me to change)</h2>
+		<h2 ng-hide="boolValue">Hide this (click me to change)</h2>
+	</div>
+
+	<div class="row">
+		<div class="span3">
+			<div><strong>Date: </strong>{{event.date | date:'dd/MM/yyyy'}}</div>
+			<div><strong>Time: </strong>{{event.time}}</div>
+			<div><strong>Price: </strong>{{35 | currency:"Bs. "}}</div>
+		</div>
+		<div class="span4">
+			<address>
+				<strong>Address:</strong><br />
+				{{event.location.address}}<br />
+				{{event.location.city}}, {{event.location.province}}
+			</address>
+		</div>
+	</div>
+
+	<!-- expresiones -->
+	<div ng-init="points=[1,15,19,2,40]; person={firstName:'John',lastName:'Doe'}; testJsonFilter={a:3, b:'Hola', c:{aa:35}}">
+		{{"hello " + "world"}} <br/> {{points[4] + " is the last element of the points array"}} <br/> {{"Person first name: " + person.firstName}}
+		<br/> {{ testJsonFilter | json}}
+	</div>
+	<!-- expresiones -->
+
+	<hr />
+	<h3>Sessions</h3>
+	Order By:
+	<select ng-model="sortOrder" class="input-small">
+		<option selected value="name">Name</option>
+		<option value="-upVoteCount">Votes</option>
+	</select>
+	Show:
+	<select ng-model="query.level" class="input-medium">
+		<option selected value="">All</option>
+		<option selected value="Introductory">Introductory</option>
+		<option selected value="Intermediate">Intermediate</option>
+		<option selected value="Advanced">Advanced</option>
+	</select>
+	<ul class="thumbnails">
+		<li ng-repeat="session in event.sessions | orderBy:sortOrder | filter:query" class="span11" id="session{{session.id}}">
+			<div class="row session">
+				<div class="span0 well votingWidget">
+					<div class="votingButton" ng-click="upVoteSession(session)">
+						<i class="icon-chevron-up icon-white"></i>
+					</div>
+					<div class="badge badge-inverse">
+						<div>{{session.upVoteCount}}</div>
+					</div>
+					<div class="votingButton" ng-click="downVoteSession(session)">
+						<i class="icon-chevron-down"></i>
+					</div>
+				</div>
+				<div class="well span9">
+					<h4 class="well-title">{{session.name}}</h4>
+					<h6 stle="margin-top:-10px">{{session.creatorName}}</h6>
+					<span>Duration: {{session.duration | durations}}</span><br/>
+					<span>Level: {{session.level}}</span>
+
+					<p>{{session.abstract}}</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>

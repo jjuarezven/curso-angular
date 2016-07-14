@@ -5,12 +5,18 @@
 	<title>Index</title>
 	<link rel="stylesheet" href="Content/bootstrap.min.css">
 	<link rel="stylesheet" href="Content/app.css">
-	<script type="text/javascript" src="Scripts/jquery-1.7.2.min.js" async></script>
-	<script type="text/javascript" src="Scripts/bootstrap.min.js" async></script>
+	<script type="text/javascript" src="Scripts/jquery-1.7.2.min.js" defer></script>
+	<script type="text/javascript" src="Scripts/bootstrap.min.js" defer></script>
 	<script type="text/javascript" src="Scripts/angular.min.js" defer></script>
 	<script type="text/javascript" src="Scripts/angular-sanitize.min.js" defer></script>
+	<script type="text/javascript" src="Scripts/angular-route.min.js" defer></script>
 	<script type="text/javascript" src="Scripts/angular-resource.min.js" defer></script>
 	<script type="text/javascript" src="Scripts/app.js" defer></script>
+	<script type="text/javascript" src="Scripts/controllers/EditEventController.js" defer></script>
+	<script type="text/javascript" src="Scripts/controllers/EventController.js" defer></script>
+	<script type="text/javascript" src="Scripts/controllers/EventListController.js" defer></script>
+	<script type="text/javascript" src="Scripts/services/EventData.js" defer></script>
+	<script type="text/javascript" src="Scripts/filters.js" defer></script>
 
 	<style>
 		input.ng-invalid.ng-dirty {
@@ -23,7 +29,7 @@
 		<div class="navbar">
 			<div class="navbar-inner">
 				<ul class="nav">
-					<li><a href="/NewEvent.html">Create Event</a></li>
+					<li><a href="#/newEvent">Create Event</a></li>
 				</ul>
 			</div>
 		</div>

@@ -123,7 +123,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="templates\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -168,10 +167,12 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="CookieStoreSample.html" />
+    <Content Include="templates\EventList.html" />
     <Content Include="FilterSample.html" />
     <Content Include="index.html" />
     <Content Include="LocalSample.html" />
     <Content Include="Scripts\controllers\CookieStoreSampleController.js" />
+    <Content Include="Scripts\controllers\EventListController.js" />
     <Content Include="Scripts\controllers\FilterSampleController.js" />
     <Content Include="Scripts\controllers\LocalSampleController.js" />
     <Content Include="Scripts\controllers\ExceptionHandler.js" />
@@ -184,14 +185,14 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="EditProfile.html" />
-    <Content Include="EventDetails.html" />
+    <Content Include="templates\EventDetails.html" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="img\angularjs-logo.png" />
     <Content Include="img\glyphicons-halflings-white.png" />
     <Content Include="img\glyphicons-halflings.png" />
     <Content Include="img\profile.jpg" />
-    <Content Include="NewEvent.html" />
+    <Content Include="templates\NewEvent.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
