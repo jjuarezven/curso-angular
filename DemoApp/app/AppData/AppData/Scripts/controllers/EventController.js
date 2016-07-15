@@ -23,11 +23,13 @@ eventsApp.controller('EventController',
 		
 		// usando $resource
 		//$scope.event = eventData.getEvent();
-		eventData.getEvent($routeParams.eventId)
-			.$promise
-			.then(function(event) {$scope.event = event;})
-			.catch(function(response) {console.log(response);});
+		//eventData.getEvent($routeParams.eventId)
+		//	.$promise
+		//	.then(function(event) {$scope.event = event;})
+		//	.catch(function(response) {console.log(response);});
 		
+		// usando $resolve properties
+		$scope.event = $route.current.locals.event;
 		
 		$scope.upVoteSession = function(session){
 			session.upVoteCount++;
