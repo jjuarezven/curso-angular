@@ -167,6 +167,7 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="CookieStoreSample.html" />
+    <Content Include="Scripts\controllers\MainMenuController.js" />
     <Content Include="templates\EventList.html" />
     <Content Include="FilterSample.html" />
     <Content Include="index.html" />
