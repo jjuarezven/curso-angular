@@ -10,9 +10,7 @@ namespace AppData.Controllers
 	{
 		public ActionResult Index()
 		{
-			ViewBag.Title = "Home Page";
-
-			return View();
+			return File("~/index.html", "text/html");
 		}
 	}
 }
