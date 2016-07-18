@@ -1,10 +1,10 @@
-'use strict';
+Ôªø'use strict';
 
 eventsApp.directive('mySample', function ($compile) {
 	// usando la directiva como clase
 	return {
 		restrict: "C",
-		// si la directiva solo renderizar· html
+		// si la directiva solo renderizar√° html se puede usar template en lugar de link: function (scope, element, attrs, controller)....
 		template: "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>"
 	};
 
@@ -18,7 +18,7 @@ eventsApp.directive('mySample', function ($compile) {
 	// usando la directiva como elemento
 	//return {
 	//	restrict: "E",
-	//	// si la directiva solo renderizar· html
+	//	// si la directiva solo renderizar√° html
 	//	template: "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>"
 	//};
 
@@ -26,5 +26,5 @@ eventsApp.directive('mySample', function ($compile) {
 	//	var markup = "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>";
 	//	angular.element(element).html($compile(markup)(scope));
 	//}
-		
+
 });
