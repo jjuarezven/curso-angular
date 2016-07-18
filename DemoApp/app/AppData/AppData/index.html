@@ -17,9 +17,12 @@
 	<script type="text/javascript" src="/Scripts/controllers/EventController.js" defer></script>
 	<script type="text/javascript" src="/Scripts/controllers/EventListController.js" defer></script>
 	<script type="text/javascript" src="/Scripts/controllers/MainMenuController.js" defer></script>
+	<script type="text/javascript" src="/Scripts/controllers/SampleDirectiveController.js" defer></script>
+	<script type="text/javascript" src="/Scripts/directives.js" defer></script>
 	<script type="text/javascript" src="/Scripts/services/EventData.js" defer></script>
 	<script type="text/javascript" src="/Scripts/filters.js" defer></script>
-
+	
+	
 	<style>
 		input.ng-invalid.ng-dirty {
 			background-color: red;
@@ -33,6 +36,7 @@
 				<ul class="nav">
 					<!--<li><a href="newEvent">Create Event</a></li>-->
 					<li><a href="#" ng-click="createEvent()">Create Event</a></li>
+					<li><a href="#" ng-click="showDirective()">Directive</a></li>					
 				</ul>
 			</div>
 		</div>

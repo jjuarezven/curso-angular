@@ -14,5 +14,9 @@ eventsApp.controller('MainMenuController',
 		$scope.createEvent = function () {
 			$location.url("newEvent");
 		}
+
+		$scope.showDirective = function () {
+			$location.url("sampleDirective");
+		}
 	}
 );

@@ -6,14 +6,14 @@ eventsApp.controller('CookieStoreSampleController',
 
 		$scope.saveEventToCookie = function (event) {
 			$cookieStore.put("event", event);
-		}
+		};
 
 		$scope.getEventFromCookie = function () {
 			console.log($cookieStore.get("event"));
-		}
+		};
 
 		$scope.removeEventCookie = function () {
 			$cookieStore.remove("event");
-		}
+		};
 	}
 );

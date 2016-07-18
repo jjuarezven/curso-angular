@@ -167,6 +167,7 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="CookieStoreSample.html" />
     <Content Include="Scripts\controllers\MainMenuController.js" />
+    <Content Include="Scripts\controllers\SampleDirectiveController.js" />
     <Content Include="templates\EventList.html" />
     <Content Include="FilterSample.html" />
     <Content Include="index.html" />
@@ -176,6 +177,7 @@
     <Content Include="Scripts\controllers\FilterSampleController.js" />
     <Content Include="Scripts\controllers\LocalSampleController.js" />
     <Content Include="Scripts\controllers\ExceptionHandler.js" />
+    <Content Include="templates\SampleDirective.html" />
     <Content Include="TimeoutSample.html" />
     <Content Include="CompileSample.html" />
     <Content Include="CacheSample.html" />
