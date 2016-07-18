@@ -5,7 +5,8 @@ eventsApp.directive('mySample', function ($compile) {
 	return {
 		restrict: "C",
 		// si la directiva solo renderizará html se puede usar template en lugar de link: function (scope, element, attrs, controller)....
-		template: "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>"
+		template: "<input type='text' ng-model='sampleData' /> {{sampleData}}<br/>",
+		scope: {}
 	};
 
 	// usando la directiva como atributo

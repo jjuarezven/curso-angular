@@ -46,9 +46,9 @@ eventsApp.controller('EventController',
 			$scope.buttonDisabled = $scope.boolValue;
 		};
 		
-		$scope.scrollToSession = function() {
+		$scope.scrollToSession = function () {
 			$anchorScroll();
-		}
+		};
 
 		// accediendo a propiedades personalizadas mediante el servicio $route
 		console.log($route.current.foo);
@@ -59,6 +59,6 @@ eventsApp.controller('EventController',
 
 		$scope.Reload = function () {
 			$route.reload();
-		}
+		};
 	}
 );
