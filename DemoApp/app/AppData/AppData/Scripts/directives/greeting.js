@@ -40,8 +40,10 @@ eventsApp.directive('greeting', function () {
 	return {
 		restrict: 'E',
 		replace: true,
-		priority: -1,
-		template: "<button class='btn' ng-click='sayHello()'>Say Hello</button>",
+		// descomentar para ver el funcionamiento de priority
+		//priority: -1,
+		transclude: true,
+		template: "<div><button class='btn' ng-click='sayHello()'>Say Hello</button><div ng-transclude></div></div>",
 		controller: function GreetingController($scope) {
 			var greetings = ['hello'];
 			$scope.sayHello = function () {
@@ -54,11 +56,12 @@ eventsApp.directive('greeting', function () {
 	};
 })
 .directive('finnish', function () {
-    return {
-    	restrict: 'A',
-    	require: 'greeting',
-    	priority: -1,
-		terminal: true,
+	return {
+		restrict: 'A',
+		require: '^greeting',
+    	// descomentar para ver el funcionamiento de priority y terminal
+    	//priority: -1,
+		//terminal: true,
     	link: function (scope, element, attrs, controller) {
     		controller.addGreeting('hei');
     	}
@@ -67,8 +70,9 @@ eventsApp.directive('greeting', function () {
 .directive('hindi', function () {
     return {
     	restrict: 'A',
-    	require: 'greeting',
-    	priority: -2,
+    	require: '^greeting',
+    	// descomentar para ver el funcionamiento de priority
+    	//priority: -2,
     	link: function (scope, element, attrs, controller) {
     		controller.addGreeting('namaste');
     	}
