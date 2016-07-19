@@ -18,5 +18,9 @@ eventsApp.controller('MainMenuController',
 		$scope.showDirective = function () {
 			$location.url("sampleDirective");
 		}
+
+		$scope.editProfile = function () {
+			$location.url("editProfile");
+		}
 	}
 );
