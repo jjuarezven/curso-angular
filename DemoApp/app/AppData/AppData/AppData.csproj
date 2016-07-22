@@ -166,10 +166,12 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="CookieStoreSample.html" />
+    <Content Include="DirectiveCompileSample.html" />
     <Content Include="DirectiveControllerSample.html" />
     <Content Include="Scripts\controllers\MainMenuController.js" />
     <Content Include="Scripts\controllers\SampleDirectiveController.js" />
     <Content Include="Scripts\directives\collapsible.js" />
+    <Content Include="Scripts\directives\repeatx.js" />
     <Content Include="Scripts\directives\greeting.js" />
     <Content Include="Scripts\directives\eventThumbnail.js" />
     <Content Include="Scripts\directives\gravatar.js" />
