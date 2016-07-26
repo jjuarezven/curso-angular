@@ -48,10 +48,10 @@ eventsApp.directive('greeting', function () {
 			var greetings = ['hello'];
 			$scope.sayHello = function () {
 				alert(greetings.join());
-			}
+			};
 			this.addGreeting = function (greeting) {
 				greetings.push(greeting);
-			}
+			};
 		}
 	};
 })
@@ -59,24 +59,24 @@ eventsApp.directive('greeting', function () {
 	return {
 		restrict: 'A',
 		require: '^greeting',
-    	// descomentar para ver el funcionamiento de priority y terminal
-    	//priority: -1,
+		// descomentar para ver el funcionamiento de priority y terminal
+		//priority: -1,
 		//terminal: true,
-    	link: function (scope, element, attrs, controller) {
-    		controller.addGreeting('hei');
-    	}
-    }
+		link: function (scope, element, attrs, controller) {
+			controller.addGreeting('hei');
+		}
+	};
 })
 .directive('hindi', function () {
-    return {
-    	restrict: 'A',
-    	require: '^greeting',
-    	// descomentar para ver el funcionamiento de priority
-    	//priority: -2,
-    	link: function (scope, element, attrs, controller) {
-    		controller.addGreeting('namaste');
-    	}
-    }
-})
+	return {
+		restrict: 'A',
+		require: '^greeting',
+		// descomentar para ver el funcionamiento de priority
+		//priority: -2,
+		link: function (scope, element, attrs, controller) {
+			controller.addGreeting('namaste');
+		}
+	};
+});
 
 // #endregion
